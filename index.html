@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            tendangnhap = document.getElementById("tendangnhap").value;
+            matkhau = document.getElementById("matkhau").value;
+            nhaplaipass = document.getElementById("nhaplai").value;
+            mail = document.getElementById("mail").value;
+            sdt = document.getElementById("sdt").value;
+            let isvalid = true;
+            
+            tendangnhapRegex = /^[a-zA-Z0-9]{6,}$/;
+            matkhauRegex = /^[a-zA-Z0-9]{8,}$/;
+            // mailRegex = /^[a-zA-Z0-9]{1,}+@[a-zA-Z]{3,}\.[a-zA-Z]{3,}$/;
+            sdtRegex = /^0[0-9]{9}$/;
+
+            if(!tendangnhapRegex.test(tendangnhap)){
+                document.getElementById('loiten').innerHTML = "Tên đăng nhập phải ít nhất 6 ký tự, bao gồm chữ và số.";
+                tendangnhap = false;
+            }
+            if(!matkhauRegex.test(matkhau)){
+                document.getElementById('loimk').innerHTML = "Mật khẩu phải ít nhất 8 ký tự, bao gồm cả chữ và số.";
+                matkhau = false;
+            }
+            if(matkhau != nhaplaipass){
+                document.getElementById('loinhaplai').innerHTML = 'Nhập lại mật khẩu không khớp.';
+                nhaplaipass = false;
+            }
+            // if(!mailRegex.test(mail)){
+            //     document.getElementById('loimail').innerHTML = 'Email không đúng định dạng.';
+            //     isValid = false;
+            // }
+            if(!sdtRegex.test(sdt)){
+                document.getElementById('loisdt').innerHTML = 'Số điện thoại phải có 10 ký tự và bắt đầu bằng số 0.';
+                sdt = false;
+            }
+            // if(isvalid){
+            //     alert("Đăng nhập thành công!");
+            // }
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="post" onsubmit="return check();">
+        Tên đăng nhập <input type="text" name="tendangnhap" id="tendangnhap"><label id="loiten"></label><br>
+        Mật khẩu <input type="password" name="matkhau" id="matkhau"><label id="loimk"></label><br>
+        Nhập lại mật khẩu <input type="password" name="nhaplai" id="nhaplai"><label id="loinhaplai"></label><br>
+        Email <input type="email" name="mail" id="mail"><label id="loimail"></label><br>
+        Số điện thoại <input type="text" name="sdt" id="sdt"><label id="loisdt"></label><br>
+        <input type="submit" name="submit" value="submit">
+    </form>
+</body>
+</html>

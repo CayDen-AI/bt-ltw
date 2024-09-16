@@ -1,0 +1,15 @@
+p {
+    font-family:verdana; 
+    color:#0000FF;
+}
+
+.test {
+    color: blueviolet;
+}
+
+.thep2 {
+    padding: 70px;
+    border: 2px solid green;
+    margin: 100px;
+    width: 150px;
+}
