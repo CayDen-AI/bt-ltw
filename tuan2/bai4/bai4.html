@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            margin: 0px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .column-left{
+            grid-column: span 3;
+        }
+        .column-right{
+            grid-column: span 9;
+        }
+        header h1 {
+            background-color: yellow;
+            padding: 15px;
+        }
+        .menu {
+            background-color: aqua;
+        }
+        a {
+            text-decoration: none;
+        }
+        .menu ul {
+            display: flex;
+            background-color: rgb(73, 167, 255);
+            /* padding: 10px 10px; */
+            list-style: none;
+            justify-content: flex-end;
+        }
+
+        .menu ul li:hover {
+            background-color: rgb(45, 108, 166);
+        }
+
+        .menu ul li {
+            color: white;
+            font-style: bold;
+        /* margin-right: 100px; */
+        /* padding: 10px 40px; */
+            cursor: pointer;
+        }
+
+        .menu ul li a {
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown-content {
+            display: none !important;
+            flex-direction: column;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown p, .dropdown li {
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .dropdown:hover .dropdown-content {
+            position: absolute;
+            display: block;
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            display: flex !important;
+        }
+
+        .dropdown:hover ul.dropdown-content {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(240, 240, 240);
+        }
+
+        .dropdown:hover ul.dropdown-content li a {
+            color: black;
+        }
+
+        .dropdown:hover ul.dropdown-content li:hover {
+            background-color: rgb(202, 202, 202);
+        }
+        @media screen and (max-width: 768px) {
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu ul li {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .menu ul li a {
+                text-align: center;
+                text-decoration: none;
+                color: white;
+            }
+
+            .menu ul li.dropdown ul.dropdown-content li {
+                padding: 18px 0;
+            }
+
+            .menu ul li.dropdown ul.dropdown-content li a {
+                display: flex;
+                justify-content: center;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .timkiem {
+                display: flex;
+                flex-direction: column;
+            }  
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BOOKS ONLINE</h1>
+    </header>
+    
+    <div class="menu" align="center">
+        <ul>
+            <li class="dropdown">
+              <p>SÁCH GIÁO KHOA</p>
+              <ul class="dropdown-content">
+                <li><a href="#">Lớp 6</a></li>
+                <li><a href="#">Lớp 7</a></li>
+                <li><a href="#">Lớp 8</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><p>SÁCH THAM KHẢO</p></li>
+            <li class="dropdown"><p>TẠP CHÍ CHUYÊN NGÀNH</p></li>
+            <li class="dropdown"><p>TRUYỆN THIẾU NHI</p></li>
+          </ul>
+    </div>
+    <div class="container">
+        <div class="column-left">
+            <div class="timkiem">
+                <p style="margin: 0px;">Tìm kiếm:</p>
+                <input type="text">
+                <input type="button" name="button" id="button" value="Tìm">
+            </div>
+        </div>
+        <div class="column-right">
+            <table>
+                <tr>
+                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
+                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
+                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
+                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
+                </tr>
+                <tr>
+                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
+                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
+                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
+                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- <footer></footer> -->
+</body>
+</html>
