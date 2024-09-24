@@ -90,10 +90,26 @@
         .dropdown:hover ul.dropdown-content li:hover {
             background-color: rgb(202, 202, 202);
         }
+        .inner-wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .sach {
+            width: calc(100%/4);
+        }
+
+        .sach img{
+            width: 100%;
+        }
         @media screen and (max-width: 768px) {
             .menu ul {
                 flex-direction: column;
             }
+
+            .sach {
+            width: calc(100%/2);
+        }
+
 
             .menu ul li {
                 padding-top: 10px;
@@ -157,20 +173,16 @@
             </div>
         </div>
         <div class="column-right">
-            <table>
-                <tr>
-                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
-                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
-                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
-                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
-                </tr>
-                <tr>
-                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
-                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
-                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
-                    <td class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt="" width="150px" height="300px"></a></td>
-                </tr>
-            </table>
+            <div class="inner-wrap">
+                <div class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt=""></a></div>
+                <div class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt=""></a></div>
+                <div class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt=""></a></div>
+                <div class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt=""></a></div>
+                <div class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt=""></a></div>
+                <div class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt=""></a></div>
+                <div class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt=""></a></div>
+                <div class="sach"><a href="#"><img src="images/increasing-success-photo.jpg" alt=""></a></div>
+            </div>
         </div>
     </div>
     <!-- <footer></footer> -->

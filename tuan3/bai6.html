@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            width: fit-content;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            Ngày sinh<input type="text" name="txtNgaysinh" id="txtNgaysinh"><br />
+            Cung <input type="text" id="cung" value="" disabled><br />
+            <button type="submit" onclick="thuchien()">Xem</button>
+            <input type="reset" name="xoa" id="xoa" value="Xóa">
+        </form>
+    </div>
+
+    <script>
+        function checkZodiac(day, month) {
+            if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
+                return "Bảo Bình";
+            } else if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
+                return "Song Ngư";
+            } else if ((month === 3 && day >= 21) || (month === 4 && day <= 20)) {
+                return "Bạch Dương";
+            } else if ((month === 4 && day >= 21) || (month === 5 && day <= 20)) {
+                return "Kim Ngưu";
+            } else if ((month === 5 && day >= 21) || (month === 6 && day <= 21)) {
+                return "Song Tử";
+            } else if ((month === 6 && day >= 22) || (month === 7 && day <= 22)) {
+                return "Cự Giải";
+            } else if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
+                return "Sư Tử";
+            } else if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
+                return "Xử Nữ";
+            } else if ((month === 9 && day >= 23) || (month === 10 && day <= 23)) {
+                return "Thiên Bình";
+            } else if ((month === 10 && day >= 24) || (month === 11 && day <= 22)) {
+                return "Bọ Cạp";
+            } else if ((month === 11 && day >= 23) || (month === 12 && day <= 21)) {
+                return "Nhân Mã";
+            } else if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
+                return "Ma Kết";
+            } else {
+                return "Ngày hoặc tháng không hợp lệ";
+            }
+        }
+
+        function thuchien() {
+            event.preventDefault();
+            const getIdngaysinh = document.getElementById("txtNgaysinh");
+            const getNgaysinh = getIdngaysinh.value.split("/");
+            
+            if (!getNgaysinh[0] || !getNgaysinh[1]) {
+                alert("Yêu cầu nhập đầy đủ ngày và tháng");
+                getIdngaysinh.focus();
+                return;
+            }
+
+            const day = parseInt(getNgaysinh[0]);
+            const month = parseInt(getNgaysinh[1]);
+            const zodiac = checkZodiac(day, month);
+            
+            const getIdcung = document.getElementById("cung");
+            getIdcung.value = zodiac;
+
+            document.getElementById("xoa").addEventListener("click", function() {
+                getIdcung.value = "";
+            });
+        }
+    </script>
+</body>
+</html>

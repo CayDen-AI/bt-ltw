@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            width: fit-content;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            Chuỗi <input type="text" name="txtchuoi" id="txtchuoi"><br />
+            Danh sách <select name="ddlDanhsach" id="ddlDanhsach"></select><br />
+            <button type="submit" onclick="thuchien()">Thực hiện</button>
+            <input type="reset" name="huy" id="huy" value="Hủy">
+        </form>
+    </div>
+
+    <script>
+        function thuchien(){
+            event.preventDefault();
+            var getidchuoi = document.getElementById("txtchuoi");
+            var getidselect = document.getElementById("ddlDanhsach");
+            if(!getidchuoi.value){
+                alert("Yêu cầu nhập nội dung");
+                getidchuoi.focus();
+                return;
+            }
+            else {
+                tachchuoi = getidchuoi.value.split(', ');
+                
+                for(let i = 0; i < tachchuoi.length; i++){
+                    getidselect.innerHTML += `<option value=${tachchuoi[i]}">${tachchuoi[i]}</option>`;
+                }
+            }
+            document.getElementById("huy").addEventListener("click", function(){
+                getidselect.innerHTML = "";
+            })
+        }
+    </script>
+</body>
+</html>
