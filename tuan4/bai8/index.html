@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="container-form">
+        <div id="tenvxl">
+            <label for="">Tên VXL</label>
+            <input type="text" name="txtTenVXL" id="txtTenVXL">
+        </div>
+        <div id="hang">
+            <label for="">Hãng</label>
+            <input type="text" name="txtHang" id="txtHang">
+        </div>
+        <div id="ngayramat">
+            <label for="">Ngày ra mắt</label>
+            <input type="text" name="txtNgayramat" id="txtNgayramat">
+        </div>
+        <div id="gia">
+            <label for="">Giá</label>
+            <input type="text" name="txtGia" id="txtGia">
+        </div>
+        <div id="nut">
+            <button name="btnThem" id="btnThem" onclick="thuchien()">Thêm</button>
+            <button name="btnHuy" id="btnHuy">Hủy</button>
+        </div>
+    </div>
+
+    <div class="container-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên VXL</th>
+                    <th>Hãng sx</th>
+                    <th>Ngày ra mắt</th>
+                    <th>Giá (vnđ)</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td>1</td>
+                    <td>Core i3 7100</td>
+                    <td>Intel</td>
+                    <td>20/11/2011</td>
+                    <td>3450000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Core i5 4430</td>
+                    <td>Intel</td>
+                    <td>21/08/2012</td>
+                    <td>4530000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
