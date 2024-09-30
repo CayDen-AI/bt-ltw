@@ -1,0 +1,13 @@
+#btnLuu {
+    display: none;
+}
+
+#hang {
+    display: none;
+}
+
+.container {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 20px;
+}
