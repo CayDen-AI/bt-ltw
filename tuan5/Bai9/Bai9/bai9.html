@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>bai 9</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-form">
+        <form action="xuly.aspx" method="post">
+            <div id="tenvxl">
+                <label for="">Tên VXL</label>
+                <input type="text" name="txtTenVXL" id="txtTenVXL" />
+            </div>
+            <div id="hang">
+                <label for="">Hãng</label>
+                <input type="text" name="txtHang" id="txtHang" />
+            </div>
+            <div id="ngayramat">
+                <label for="">Ngày ra mắt</label>
+                <input type="text" name="txtNgayramat" id="txtNgayramat" />
+            </div>
+            <div id="gia">
+                <label for="">Giá</label>
+                <input type="text" name="txtGia" id="txtGia" />
+            </div>
+            <div id="nut">
+                <button name="btnThem" id="btnThem">Thêm</button>
+                <button name="btnHuy" id="btnHuy">Hủy</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-table">
+        <form action="xuly2.aspx" method="get">
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên VXL</th>
+                        <th>Hãng sx</th>
+                        <th>Ngày ra mắt</th>
+                        <th>Giá (vnđ)</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td>1</td>
+                        <td>Core i3 7100</td>
+                        <td>Intel</td>
+                        <td>20/11/2011</td>
+                        <td>3450000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Core i5 4430</td>
+                        <td>Intel</td>
+                        <td>21/08/2012</td>
+                        <td>4530000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
